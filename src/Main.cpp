@@ -12,11 +12,26 @@
 
 int main()
 {
-    std::cout << "Snake game!" << std::endl;
+    try
+    {
+        std::cout << "Snake game!" << std::endl;
 
-    auto game = std::make_unique<Game>();
+        auto game = std::make_unique<Game>();
 
-    game->play();
+        game->play();
+    }
+    catch (const char* ex)
+    {
+        std::cerr << ex << std::endl;
+    }
+    catch (const std::exception& ex)
+    {
+        std::cerr << ex.what() << std::endl;
+    }
+    catch (...)
+    {
+        std::cerr << "Exception occured!" << std::endl;
+    }
 
     return 0;
 }

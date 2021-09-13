@@ -7,3 +7,6 @@ obj/
 # Eclipse project files
 .cproject
 .project
+
+# Game views folder
+GameView/
