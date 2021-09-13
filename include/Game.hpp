@@ -5,27 +5,47 @@
  *
  */
 
-#ifndef INCLUDE_GAME_HPP_INCLUDED
-#define INCLUDE_GAME_HPP_INCLUDED
+#ifndef GAME_HPP_INCLUDED
+#define GAME_HPP_INCLUDED
+
+#include "Animation.hpp"
+#include "Snake.hpp"
 
 class Game
 {
+private:
+
+    /**
+     * @brief Main game window.
+     */
+    sf::RenderWindow window;
+
+    /**
+     * @brief Fire animation on the walls.
+     */
+    Animation fire_animation;
+
+    /**
+     * @brief Snake of the game.
+     */
+    Snake snake;
+
 public:
 
     /**
-     * Default constrcutor.
+     * @brief Default constrcutor.
      */
     Game();
 
     /**
-     * Destructor.
+     * @brief Destructor.
      */
     ~Game();
 
     /**
-     * Starts the gameplay.
+     * @brief Starts the gameplay.
      */
     void play();
 };
 
-#endif /* INCLUDE_GAME_HPP_INCLUDED */
+#endif /* GAME_HPP_INCLUDED */
