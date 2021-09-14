@@ -53,6 +53,12 @@ public:
     ~Animation();
 
     /**
+     * @brief Gets sprites of the animation.
+     * @return Returns sprites.
+     */
+    std::array<sf::Sprite, 100>& getSprites();
+
+    /**
      * @brief Updates the current frame of the animation.
      * @param elapsed_time Elapsed time.
      */

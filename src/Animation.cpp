@@ -47,6 +47,11 @@ Animation::~Animation()
 {
 }
 
+std::array<sf::Sprite, 100>& Animation::getSprites()
+{
+    return sprites;
+}
+
 void Animation::updateFrame(const sf::Time& elapsed_time)
 {
     float time_seconds = elapsed_time.asSeconds();

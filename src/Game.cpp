@@ -8,14 +8,45 @@
 #include "../include/Game.hpp"
 
 #include <iostream>
+#include <string>
 
-Game::Game()
+Game::Game(): score(0)
 {
-    window.create(sf::VideoMode(1470, 918), "Snake Game");
+    window.create(sf::VideoMode(1470, 918), "Snake Game  -  Score: 0");
 }
 
 Game::~Game()
 {
+}
+
+void Game::checkFruitEating()
+{
+    if (snake.getHeadSprite().getGlobalBounds().intersects(fruit.getSprite().getGlobalBounds()))
+    {
+        score++;
+
+        std::string str("Snake Game  -  Score: ");
+        str.append(std::to_string(score));
+        window.setTitle(str.c_str());
+
+        snake.growSnake();
+        fruit.relocate();
+    }
+}
+
+bool Game::checkGameOver()
+{
+    std::array<sf::Sprite, 100> sprites = fire_animation.getSprites();
+
+    for (auto& sprite : sprites)
+    {
+        if (snake.getHeadSprite().getGlobalBounds().intersects(sprite.getGlobalBounds()))
+        {
+            return true;
+        }
+    }
+
+    return false;
 }
 
 void Game::play()
@@ -71,6 +102,7 @@ void Game::play()
         fire_animation.updateFrame(elapsed_time);
         snake.move(delta_time);
 
+        checkFruitEating();
 
         window.clear(sf::Color::White);
 
@@ -78,6 +110,17 @@ void Game::play()
         fruit.draw(window);
         snake.draw(window);
 
+        if (checkGameOver())
+        {
+            message_box.draw(window, score);
+        }
+
         window.display();
+
+        if (checkGameOver())
+        {
+            sf::sleep(sf::milliseconds(5000));
+            window.close();
+        }
     }
 }

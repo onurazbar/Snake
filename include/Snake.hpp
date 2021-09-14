@@ -84,6 +84,17 @@ public:
     ~Snake();
 
     /**
+     * @brief Gets sprite of the snake's head.
+     * @return Returns head_sprite.
+     */
+    sf::Sprite& getHeadSprite();
+
+    /**
+     * @brief Grows snake by adding node.
+     */
+    void growSnake();
+
+    /**
      * @brief Draws the snake on window.
      * @param window Main game window.
      */

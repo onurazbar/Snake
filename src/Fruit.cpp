@@ -20,19 +20,30 @@ Fruit::Fruit()
 
     std::srand(std::time(0));
 
-    int x = (std::rand() % 1350) + 1;
-    int y = (std::rand() % 850) + 1;
-
     sprite.setTexture(texture);
     sprite.setOrigin(sf::Vector2f(20, 20));
-    sprite.setPosition(sf::Vector2f(x, y));
+
+    relocate();
 }
 
 Fruit::~Fruit()
 {
 }
 
+sf::Sprite& Fruit::getSprite()
+{
+    return sprite;
+}
+
 void Fruit::draw(sf::RenderWindow& window)
 {
     window.draw(sprite);
+}
+
+void Fruit::relocate()
+{
+    int x = (std::rand() % 1300) + 60;
+    int y = (std::rand() % 800) + 60;
+
+    sprite.setPosition(sf::Vector2f(x, y));
 }

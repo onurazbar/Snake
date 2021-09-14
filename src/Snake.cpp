@@ -125,6 +125,41 @@ void Snake::fixPositionShifts()
     }
 }
 
+sf::Sprite& Snake::getHeadSprite()
+{
+    return head_sprite;
+}
+
+void Snake::growSnake()
+{
+    Direction direction = body_directions.back();
+    body_directions.push_back(direction);
+
+    std::cout << "direction: " << direction << std::endl;
+
+    sf::Vector2f position = body_sprites.back().getPosition();
+
+    body_sprites.push_back(sf::Sprite(body_texture));
+    body_sprites.back().setOrigin(sf::Vector2f(20, 20));
+
+    if (direction == right)
+    {
+        body_sprites.back().setPosition(sf::Vector2f(position.x - 40, position.y));
+    }
+    else if (direction == left)
+    {
+        body_sprites.back().setPosition(sf::Vector2f(position.x + 40, position.y));
+    }
+    else if (direction == up)
+    {
+        body_sprites.back().setPosition(sf::Vector2f(position.x, position.y + 40));
+    }
+    else if (direction == down)
+    {
+        body_sprites.back().setPosition(sf::Vector2f(position.x, position.y - 40));
+    }
+}
+
 void Snake::draw(sf::RenderWindow& window)
 {
     for (auto& sprite : body_sprites)

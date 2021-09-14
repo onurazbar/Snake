@@ -5,8 +5,8 @@
  *
  */
 
-#ifndef FRUIT_HPP__INCLUDED
-#define FRUIT_HPP__INCLUDED
+#ifndef FRUIT_HPP_INCLUDED
+#define FRUIT_HPP_INCLUDED
 
 #include <SFML/Graphics.hpp>
 
@@ -37,10 +37,21 @@ public:
     ~Fruit();
 
     /**
+     * @brief Gets sprite of the fruit.
+     * @return Returns sprite.
+     */
+    sf::Sprite& getSprite();
+
+    /**
      * @brief Draws the fruit on window.
      * @param window Main game window.
      */
     void draw(sf::RenderWindow& window);
+
+    /**
+     * @brief Relocates the fruit.
+     */
+    void relocate();
 };
 
-#endif /* FRUIT_HPP__INCLUDED */
+#endif /* FRUIT_HPP_INCLUDED */

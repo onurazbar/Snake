@@ -11,10 +11,16 @@
 #include "Animation.hpp"
 #include "Snake.hpp"
 #include "Fruit.hpp"
+#include "MessageBox.hpp"
 
 class Game
 {
 private:
+
+    /**
+     * @brief Score of the game.
+     */
+    int score;
 
     /**
      * @brief Main game window.
@@ -35,6 +41,22 @@ private:
      * @brief Fruit of the game.
      */
     Fruit fruit;
+
+    /**
+     * @brief Message box for game over case.
+     */
+    MessageBox message_box;
+
+    /**
+     * @brief Checks whether snake touches the fruit or not.
+     */
+    void checkFruitEating();
+
+    /**
+     * @brief Checks whether snake touches the fire or itself.
+     * @return Returns true if game is over.
+     */
+    bool checkGameOver();
 
 public:
 
