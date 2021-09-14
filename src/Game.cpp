@@ -39,7 +39,23 @@ void Game::play()
                     break;
 
                 case sf::Event::KeyPressed:
-                    if (event.key.code == sf::Keyboard::Escape)
+                    if (event.key.code == sf::Keyboard::Right)
+                    {
+                        snake.changeDirection(right);
+                    }
+                    else if (event.key.code == sf::Keyboard::Left)
+                    {
+                        snake.changeDirection(left);
+                    }
+                    else if (event.key.code == sf::Keyboard::Up)
+                    {
+                        snake.changeDirection(up);
+                    }
+                    else if (event.key.code == sf::Keyboard::Down)
+                    {
+                        snake.changeDirection(down);
+                    }
+                    else if (event.key.code == sf::Keyboard::Escape)
                     {
                         window.close();
                     }
@@ -53,6 +69,7 @@ void Game::play()
         elapsed_time += delta_time;
 
         fire_animation.updateFrame(elapsed_time);
+        snake.move(delta_time);
 
 
         window.clear(sf::Color::White);
