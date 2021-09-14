@@ -75,6 +75,7 @@ void Game::play()
         window.clear(sf::Color::White);
 
         fire_animation.draw(window);
+        fruit.draw(window);
         snake.draw(window);
 
         window.display();

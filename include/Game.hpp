@@ -10,6 +10,7 @@
 
 #include "Animation.hpp"
 #include "Snake.hpp"
+#include "Fruit.hpp"
 
 class Game
 {
@@ -29,6 +30,11 @@ private:
      * @brief Snake of the game.
      */
     Snake snake;
+
+    /**
+     * @brief Fruit of the game.
+     */
+    Fruit fruit;
 
 public:
 

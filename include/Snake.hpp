@@ -84,7 +84,7 @@ public:
     ~Snake();
 
     /**
-     * @brief Draws animation on window.
+     * @brief Draws the snake on window.
      * @param window Main game window.
      */
     void draw(sf::RenderWindow& window);
