@@ -29,7 +29,7 @@ This will remove **bin** and **obj** folders and all their contents. Then type *
 
 ## Game Instructions
 
-When you build the project, executable game file **backgammon** will be created under **bin** folder. To run the game go to **bin** folder and run the executable file like below;
+When you build the project, executable game file **snake** will be created under **bin** folder. To run the game go to **bin** folder and run the executable file like below;
 
 **./snake**
 
