@@ -10,7 +10,7 @@ All source(.cpp) files are placed inside the source folder **src** and all heade
 
 ## Build Instructions
 
-There is a **Makefile** to compile the source codes, link object files with SFML files and create the executable game file. To build the project go to root directory **Snake** and simply type below command:
+If SFML is not available in your system, you need to install it before building the project. There is a **Makefile** to compile the source codes, link object files with SFML files and create the executable game file. To build the project go to root directory **Snake** and simply type below command:
 
 **make**
 
