@@ -40,6 +40,7 @@ Aim of the game is to grow the snake as much as possible by eating fruits. Every
 
 Here are some gameplay videos.
 
+https://github.com/onurazbar/Snake/blob/main/GameView/GamePlay_1.gif
 
 ## Initial look
 
