@@ -24,6 +24,8 @@ If you want to make a clean build by removing output folders and files, type bel
 
 This will remove **bin** and **obj** folders and all their contents. Then type **make** commmand again.
 
+![View_2](https://user-images.githubusercontent.com/34675907/133378518-7eb3a1a0-667c-4571-bca9-60444c988162.png)
+
 
 ## Initial look
 
