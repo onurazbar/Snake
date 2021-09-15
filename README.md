@@ -27,6 +27,12 @@ This will remove **bin** and **obj** folders and all their contents. Then type *
 ![View_2](https://user-images.githubusercontent.com/34675907/133378518-7eb3a1a0-667c-4571-bca9-60444c988162.png)
 
 
+## Game Instructions
+
+When you build the project, executable game file **backgammon** will be created under **bin** folder. To run the game go to **bin** folder and run the executable file like below;
+
+**./backgammon**
+
 ## Initial look
 
 ![View_1](https://user-images.githubusercontent.com/34675907/133070703-49abb104-8554-412d-ae9a-be58aa53b90a.png)
