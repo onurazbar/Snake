@@ -16,7 +16,7 @@ If SFML is not available in your system, you need to install it before building 
 
 During first build, all the source files will be compiled and the executable game file will be created. However in later builds, only the modified and dependent source files will be compiled again.
 
-When building the project, object folder **obj** will be created and corresponding object files will be created under this folder. Then binary folder **bin** will be created and executable game file will be created under this folder after objects are linked.
+When building the project, object folder **obj** will be created and corresponding object files will be created under this folder. Then binary folder **bin** will be created and executable game file will be created under this folder after objects and SFML files are linked.
 
 If you want to make a clean build by removing output folders and files, type below command:
 
