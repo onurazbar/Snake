@@ -90,6 +90,12 @@ public:
     sf::Sprite& getHeadSprite();
 
     /**
+     * @brief Gets sprites of the snake's body.
+     * @return Returns body_sprites.
+     */
+    std::vector<sf::Sprite>& getBodySprites();
+
+    /**
      * @brief Grows snake by adding node.
      */
     void growSnake();

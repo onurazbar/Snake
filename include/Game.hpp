@@ -18,6 +18,11 @@ class Game
 private:
 
     /**
+     * @brief Indicates whether the game is ovver or not.
+     */
+    bool game_over;
+
+    /**
      * @brief Score of the game.
      */
     int score;
@@ -54,9 +59,8 @@ private:
 
     /**
      * @brief Checks whether snake touches the fire or itself.
-     * @return Returns true if game is over.
      */
-    bool checkGameOver();
+    void checkGameOver();
 
 public:
 

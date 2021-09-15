@@ -10,7 +10,7 @@
 #include <iostream>
 #include <cmath>
 
-Snake::Snake(): head_direction(right), speed(100.f)
+Snake::Snake(): head_direction(right), speed(120.f)
 {
     if (!head_texture.loadFromFile("../images/snake_head.png"))
     {
@@ -128,6 +128,11 @@ void Snake::fixPositionShifts()
 sf::Sprite& Snake::getHeadSprite()
 {
     return head_sprite;
+}
+
+std::vector<sf::Sprite>& Snake::getBodySprites()
+{
+    return body_sprites;
 }
 
 void Snake::growSnake()
