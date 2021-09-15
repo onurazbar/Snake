@@ -10,7 +10,7 @@
 #include <iostream>
 #include <cmath>
 
-Snake::Snake(): head_direction(right), speed(120.f)
+Snake::Snake(): head_direction(right), speed(150.f)
 {
     if (!head_texture.loadFromFile("../images/snake_head.png"))
     {
