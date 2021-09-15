@@ -63,64 +63,40 @@ sf::Vector2f Snake::decideMove(const Direction& direction, const float& time_sec
     return offset;
 }
 
-void Snake::fixPositionShifts()
+void Snake::shiftPositions(sf::Sprite& first_sprite, sf::Sprite& second_sprite, const Direction& direction)
 {
-    bool same_direction = true;
+    sf::Vector2f position = first_sprite.getPosition();
 
-    for (auto& direction : body_directions)
+    if (direction == right)
     {
-        if (direction != head_direction)
-        {
-            same_direction = false;
-            break;
-        }
+        second_sprite.setPosition(position.x - 40, position.y);
+    }
+    else if (direction == left)
+    {
+        second_sprite.setPosition(position.x + 40, position.y);
+    }
+    else if (direction == up)
+    {
+        second_sprite.setPosition(position.x, position.y + 40);
+    }
+    else if (direction == down)
+    {
+        second_sprite.setPosition(position.x, position.y - 40);
+    }
+}
+
+void Snake::fixAlignmentErrors()
+{
+    if (head_direction == body_directions[0])
+    {
+        shiftPositions(head_sprite, body_sprites[0], head_direction);
     }
 
-    if (same_direction)
+    for (unsigned int i = 1; i < body_sprites.size(); i++)
     {
-        if (head_direction == right)
+        if (body_directions[i - 1] == body_directions[i])
         {
-            sf::Vector2f head_position = head_sprite.getPosition();
-            body_sprites[0].setPosition(head_position.x - 40, head_position.y);
-
-            for (unsigned int i = 1; i < body_sprites.size(); i++)
-            {
-                sf::Vector2f position = body_sprites[i - 1].getPosition();
-                body_sprites[i].setPosition(position.x - 40, position.y);
-            }
-        }
-        else if (head_direction == left)
-        {
-            sf::Vector2f head_position = head_sprite.getPosition();
-            body_sprites[0].setPosition(head_position.x + 40, head_position.y);
-
-            for (unsigned int i = 1; i < body_sprites.size(); i++)
-            {
-                sf::Vector2f position = body_sprites[i - 1].getPosition();
-                body_sprites[i].setPosition(position.x + 40, position.y);
-            }
-        }
-        else if (head_direction == up)
-        {
-            sf::Vector2f head_position = head_sprite.getPosition();
-            body_sprites[0].setPosition(head_position.x, head_position.y + 40);
-
-            for (unsigned int i = 1; i < body_sprites.size(); i++)
-            {
-                sf::Vector2f position = body_sprites[i - 1].getPosition();
-                body_sprites[i].setPosition(position.x, position.y + 40);
-            }
-        }
-        else if (head_direction == down)
-        {
-            sf::Vector2f head_position = head_sprite.getPosition();
-            body_sprites[0].setPosition(head_position.x, head_position.y - 40);
-
-            for (unsigned int i = 1; i < body_sprites.size(); i++)
-            {
-                sf::Vector2f position = body_sprites[i - 1].getPosition();
-                body_sprites[i].setPosition(position.x, position.y - 40);
-            }
+            shiftPositions(body_sprites[i - 1], body_sprites[i], body_directions[i - 1]);
         }
     }
 }
@@ -139,8 +115,6 @@ void Snake::growSnake()
 {
     Direction direction = body_directions.back();
     body_directions.push_back(direction);
-
-    std::cout << "direction: " << direction << std::endl;
 
     sf::Vector2f position = body_sprites.back().getPosition();
 
@@ -237,7 +211,7 @@ void Snake::move(const sf::Time& delta_time)
         body_sprites[i].move(offset);
     }
 
-    fixPositionShifts();
+    fixAlignmentErrors();
 }
 
 void Snake::changeDirection(const Direction& direction)

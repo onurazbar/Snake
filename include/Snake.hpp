@@ -67,9 +67,17 @@ private:
     sf::Vector2f decideMove(const Direction& direction, const float& time_seconds);
 
     /**
-     * @brief Fixes position shift errors.
+     * @brief Shifts positions preserve alignment.
+     * @param first_sprite Preceding sprite.
+     * @param second_sprite Following sprite.
+     * @param direction Direction of the preceding sprite.
      */
-    void fixPositionShifts();
+    void shiftPositions(sf::Sprite& first_sprite, sf::Sprite& second_sprite, const Direction& direction);
+
+    /**
+     * @brief Fixes alignment errors of snake's head and body nodes.
+     */
+    void fixAlignmentErrors();
 
 public:
 
