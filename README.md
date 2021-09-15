@@ -33,7 +33,7 @@ When you build the project, executable game file **snake** will be created under
 
 **./snake**
 
-Aim of the game is to grow the snake as much as possible by eating fruits. Every time a fruit is eaten, game score is incremented one. If you hit the fire on the edges or the tail of the snake game will be over. When game is over a message box is displayed with game score and game window will be closed after 5 seconds.
+Aim of the game is to grow the snake as much as possible by eating fruits. Every time a fruit is eaten, game score is incremented one and it is shown above next to the title. If you hit the fire on the edges or the tail of the snake game will be over. When game is over a message box is displayed with game score and game window will be closed after 5 seconds.
 
 
 ## Game Views
