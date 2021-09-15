@@ -44,3 +44,5 @@ Here are some gameplay videos.
 
 ![View_4](https://github.com/onurazbar/Snake/blob/main/GameView/GamePlay_2.gif)
 
+![View_5](https://github.com/onurazbar/Snake/blob/main/GameView/GamePlay_3.gif)
+
