@@ -38,6 +38,14 @@ Aim of the game is to grow the snake as much as possible by eating fruits. Every
 
 ## Game Views
 
+### Game Scenes
+
+A scene of the beginning of the game is below.
+
+![View_3](https://user-images.githubusercontent.com/34675907/133563170-a9ed3555-ab68-46e2-a6fe-dc6243e0621b.png)
+
+### Gameplay Videos
+
 Here are some gameplay videos.
 
 ![View_3](https://github.com/onurazbar/Snake/blob/main/GameView/GamePlay_1.gif)
