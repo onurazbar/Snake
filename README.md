@@ -50,4 +50,4 @@ Here are some gameplay videos.
 
 ## Notes
 
-I added the gameplay videos as gif for a better view, but sometimes gif videos requires too much time to be loaded on browser. In such cases game could be seen as running a bit slow and this is related with browser rather than actual gameplay.
+I added the gameplay videos as gif for a better view, but sometimes gif videos require too much time to be loaded on browser. In such cases game could be seen as running a bit slow and this is related with browser rather than actual gameplay.
