@@ -5,7 +5,7 @@ This is 2D snake game. Game software is developed via C++ using SFML. For more i
 
 ## Project Scheme
 
-All source(.cpp) files are placed inside the source folder **src** and all header(.hpp) files are placed inside the folder **include**. Images that are used to create textures are placed inside the folder **image**. Fonts that are used for diplaying message box text are placed inside the folder **fonts**. There is also **GameView** folder that contains some game scenes but I do not prefer to add to the repo. So it is ignored inside gitignore. Besides there are also **Makefile** and **README** files.
+All source(.cpp) files are placed inside the source folder **src** and all header(.hpp) files are placed inside the folder **include**. Images that are used to create textures are placed inside the folder **image**. Fonts that are used for diplaying message box text are placed inside the folder **fonts**. There is also **GameView** folder that contains some gameplay videos. Besides there are also **Makefile** and **README** files.
 
 
 ## Build Instructions
@@ -38,9 +38,24 @@ Aim of the game is to grow the snake as much as possible by eating fruits. Every
 
 ## Game Views
 
+### Game Scenes
+
+A scene of the beginning of the game is below.
+
+![View_3](https://user-images.githubusercontent.com/34675907/133563170-a9ed3555-ab68-46e2-a6fe-dc6243e0621b.png)
+
+### Gameplay Videos
+
 Here are some gameplay videos.
 
 ![View_3](https://github.com/onurazbar/Snake/blob/main/GameView/GamePlay_1.gif)
 
 ![View_4](https://github.com/onurazbar/Snake/blob/main/GameView/GamePlay_2.gif)
 
+![View_5](https://github.com/onurazbar/Snake/blob/main/GameView/GamePlay_3.gif)
+
+
+
+## Notes
+
+I added the gameplay videos as gif for a better view, but sometimes gif videos require too much time to be loaded on browser. In such cases game could be seen as running a bit slow and this is related with browser rather than actual gameplay.
