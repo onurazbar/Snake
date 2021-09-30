@@ -111,14 +111,13 @@ void Game::play()
         snake.move(delta_time);
 
         checkFruitEating();
+        checkGameOver();
 
         window.clear(sf::Color::White);
 
         fire_animation.draw(window);
         fruit.draw(window);
         snake.draw(window);
-
-        checkGameOver();
 
         if (game_over)
         {

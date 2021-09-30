@@ -16,7 +16,7 @@ class Animation
 private:
 
     /**
-     * @brief Number fo frames.
+     * @brief Number of frames.
      */
     int frames_number;
 
